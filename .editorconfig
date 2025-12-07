@@ -1,6 +1,14 @@
+# EditorConfig is awesome: https://editorconfig.org
+
+# top-most EditorConfig file
 root = true
 
-[*] // General settings for all files
+# 4 space indentation for all files
+[*]
 charset = utf-8
 indent_style = space
 indent_size = 2
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab

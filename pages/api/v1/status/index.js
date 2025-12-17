@@ -1,8 +1,9 @@
-function status(request, response) {
-  response.setHeader("Content-Type", "application/json; charset=utf-8");
-  response.status(200).json({ message: "A API está funcionando!" });
-  //response.status(200).send("A API está funcionando!");
-  //send não consegue manipular charset.
+import database from "../../../../infra/database.js";
+
+async function status(req, res) {
+  const result = await database.query("SELECT 1 + 1 AS sum;");
+  console.log(result);
+  res.status(200).json({ ok: true, sum: result.rows[0].sum });
 }
 
 export default status;

@@ -35,6 +35,7 @@ async function status(request, response) {
       database: databaseVersionValue,
       //current_users: res.rows[0].current_users,
       max_connections: parseInt(databaseMaxConnectionsValue),
+      opened_connections: parseInt(databaseOpenedConnectionsValue),
     },
   });
 
